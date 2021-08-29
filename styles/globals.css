@@ -1,0 +1,10 @@
+html,
+ h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+
+
+* {
+  box-sizing: border-box;
+}
