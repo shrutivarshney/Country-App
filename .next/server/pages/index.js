@@ -27,7 +27,10 @@ var head_ = __webpack_require__(701);
 var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 // EXTERNAL MODULE: ./src/component/Layout.js
 var Layout = __webpack_require__(62);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(664);
 ;// CONCATENATED MODULE: ./src/component/CountriesTable.js
+
 
 
 
@@ -76,14 +79,17 @@ const CountriesTable = ({
                   }), " ", country.capital]
                 }), /*#__PURE__*/jsx_runtime_.jsx("a", {
                   className: "btn btn-outline-primary col-md-6 rounded-0 mx-2",
+                  target: "_blank",
                   role: "button",
                   href: `https://maps.google.com/?q=${country.latlng}`,
                   children: "Show Map"
-                }), /*#__PURE__*/jsx_runtime_.jsx("a", {
-                  className: "btn btn-outline-primary col-md-5 rounded-0",
-                  role: "button",
+                }), /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
                   href: `/country/${country.alpha3Code}`,
-                  children: "Details"
+                  children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+                    className: "btn btn-outline-primary col-md-5 rounded-0",
+                    role: "button",
+                    children: "Details"
+                  })
                 })]
               })
             })]
@@ -179,6 +185,22 @@ const getStaticProps = async () => {
 
 /***/ }),
 
+/***/ 417:
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("next/dist/next-server/lib/router-context.js");;
+
+/***/ }),
+
+/***/ 238:
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+
+/***/ }),
+
 /***/ 701:
 /***/ (function(module) {
 
@@ -201,6 +223,13 @@ module.exports = require("react");;
 "use strict";
 module.exports = require("react/jsx-runtime");;
 
+/***/ }),
+
+/***/ 453:
+/***/ (function() {
+
+/* (ignored) */
+
 /***/ })
 
 };
@@ -210,7 +239,7 @@ module.exports = require("react/jsx-runtime");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [62], function() { return __webpack_exec__(694); });
+var __webpack_exports__ = __webpack_require__.X(0, [664,62], function() { return __webpack_exec__(694); });
 module.exports = __webpack_exports__;
 
 })();

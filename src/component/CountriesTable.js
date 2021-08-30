@@ -18,7 +18,7 @@ const CountriesTable = ({ countries }) => {
                                     <p className="d-block"><strong>Name: </strong>{country.name}</p>
                                     <p className="d-block"><strong>Currency:</strong> {country.currencies.map(({ name }) => name).join(", ")}</p>
                                     <p className="d-block"><strong>Capital:</strong> {country.capital}</p>
-                                    <a className="btn btn-outline-primary target="_blank" col-md-6 rounded-0 mx-2" role="button" href={`https://maps.google.com/?q=${country.latlng}`}>Show Map</a>
+                                    <a className="btn btn-outline-primary col-md-6 rounded-0 mx-2" target="_blank"  role="button" href={`https://maps.google.com/?q=${country.latlng}`}>Show Map</a>
                                     <Link href={`/country/${country.alpha3Code}`}><a className="btn btn-outline-primary col-md-5 rounded-0" role="button">Details</a></Link>
                                 </div>
                             </div>
