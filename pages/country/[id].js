@@ -3,7 +3,7 @@ import Layout from '../../src/component/Layout';
 import Head from "next/head"
 
 const getCountry = async (id) => {
-    const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
+    const res = await fetch(`https://restcountries.com/v3.1/alpha/${id}`);
     const country = await res.json();
     return country;
 }
@@ -65,7 +65,7 @@ const Country = ({ country }) => {
 export default Country;
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://restcountries.eu/rest/v2/all`);
+    const res = await fetch(`https://restcountries.com/v3.1/all`);
     const countries = await res.json();
     const paths = countries.map(country => ({
         params: { id: country.alpha3Code },
