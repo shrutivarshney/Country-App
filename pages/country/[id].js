@@ -37,7 +37,7 @@ const Country = ({ country }) => {
                         <p className = "fs-5"><strong>Native Name:</strong> {country.nativeName}</p>
                         <p className = "fs-5"><strong>Capital:</strong> {country.capital}</p>
                         <p className = "fs-5"><strong>Population:</strong> {country.population}</p>
-                        <p className = "fs-5"><strong>Region:</strong> {country.region}</p>
+                        <p className = "fs-5"><strong>Redgion:</strong> {country.region}</p>
                         <p className = "fs-5"><strong>Sub-region:</strong> {country.subregion}</p>
                         <p className = "fs-5"><strong>Area:</strong> {country.area} </p>
                         <p className = "fs-5"><strong>Country Code:</strong> +{country.callingCodes}</p>
