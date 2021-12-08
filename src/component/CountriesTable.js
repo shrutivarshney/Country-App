@@ -11,7 +11,7 @@ const CountriesTable = ({ countries }) => {
                     <div className="card shadow-sm">
                         <div className="row g-0">
                             <div className="col-md-5 px-3 py-3">
-                                <img className="border" src={country.flag} alt={country.name} width="100%"></img>
+                                <img className="border" src={country.flags.map(({ name }) => name).join(", ")} alt={country.name} width="100%"></img>
                             </div>
                             <div className="col-md-7">
                                 <div className="card-body">
