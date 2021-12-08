@@ -3,7 +3,7 @@ import Layout from '../../src/component/Layout';
 import Head from "next/head"
 
 const getCountry = async (id) => {
-    const res = await fetch(`https://restcountries.com/v2/alpha/${id}`);
+    const res = await fetch(`https://restcountries.com/v3.1/${id}`);
     const country = await res.json();
     return country;
 }
@@ -31,7 +31,7 @@ const Country = ({ country }) => {
                 <h3 className="display-6">{country.name}</h3>
                 <div className="row">
                     <div className="col-lg-7 py-4">
-                        <img className="border" src={country.flag} alt={country.name} width="100%" ></img>
+                        <img className="border" src={country.flags.map(({ name }) => name).join(", ")} alt={country.name} width="100%" ></img>
                     </div>
                     <div className="col-lg-5 px-5 py-2">
                         <p className = "fs-5"><strong>Native Name:</strong> {country.nativeName}</p>
@@ -65,7 +65,7 @@ const Country = ({ country }) => {
 export default Country;
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://restcountries.com/v2/all`);
+    const res = await fetch(`https://restcountries.com/v3.1/all`);
     const countries = await res.json();
     const paths = countries.map(country => ({
         params: { id: country.alpha3Code },
