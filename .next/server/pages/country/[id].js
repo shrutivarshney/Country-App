@@ -1,184 +1,32 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (function() {
 var exports = {};
-exports.id = 226;
-exports.ids = [226];
+exports.id = "pages/country/[id]";
+exports.ids = ["pages/country/[id]"];
 exports.modules = {
 
-/***/ 7:
+/***/ "./pages/country/[id].js":
+/*!*******************************!*\
+  !*** ./pages/country/[id].js ***!
+  \*******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getStaticPaths": function() { return /* binding */ getStaticPaths; },
-/* harmony export */   "getStaticProps": function() { return /* binding */ getStaticProps; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(282);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(297);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_component_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(62);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(701);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-
-const getCountry = async id => {
-  const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
-  const country = await res.json();
-  return country;
-};
-
-const Country = ({
-  country
-}) => {
-  console.log(country);
-  const [borders, setBorders] = react__WEBPACK_IMPORTED_MODULE_1___default().useState([]);
-
-  const getBorders = async () => {
-    const borders = await Promise.all(country.borders.map(border => getCountry(border)));
-    setBorders(borders);
-  };
-
-  react__WEBPACK_IMPORTED_MODULE_1___default().useEffect(() => {
-    getBorders();
-  }, []);
-  console.log(borders);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_component_Layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
-    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_3___default()), {
-      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
-        children: country.name
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-      className: "container justify-content-center py-4",
-      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-        className: "display-6",
-        children: country.name
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "row",
-        children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-          className: "col-lg-7 py-4",
-          children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-            className: "border",
-            src: country.flag,
-            alt: country.name,
-            width: "100%"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-          className: "col-lg-5 px-5 py-2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Native Name:"
-            }), " ", country.nativeName]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Capital:"
-            }), " ", country.capital]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Population:"
-            }), " ", country.population]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Region:"
-            }), " ", country.region]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Sub-region:"
-            }), " ", country.subregion]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Area:"
-            }), " ", country.area, " "]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Country Code:"
-            }), " +", country.callingCodes]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Languages:"
-            }), " ", country.languages.map(({
-              name
-            }) => name).join(", ")]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Currencies:"
-            }), " ", country.currencies.map(({
-              name
-            }) => name).join(", ")]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-            className: "fs-5",
-            children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("strong", {
-              children: "Timezones:"
-            }), " ", country.timezones]
-          })]
-        }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-          className: "container justify-content-center py-3 border",
-          children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-            className: "row",
-            children: borders.map(({
-              flag,
-              name
-            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-              className: "col-lg-4 py-3 px-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "fs-4 display-3 py-3",
-                children: [" ", name]
-              }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                className: "border",
-                src: flag,
-                alt: name,
-                width: "100%",
-                height: "auto"
-              })]
-            }))
-          })
-        })]
-      })]
-    })]
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Country);
-const getStaticPaths = async () => {
-  const res = await fetch(`https://restcountries.eu/rest/v2/all`);
-  const countries = await res.json();
-  const paths = countries.map(country => ({
-    params: {
-      id: country.alpha3Code
-    }
-  }));
-  return {
-    paths,
-    fallback: false
-  };
-};
-const getStaticProps = async ({
-  params
-}) => {
-  const country = await getCountry(params.id);
-  return {
-    props: {
-      country
-    }
-  };
-};
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getStaticPaths\": function() { return /* binding */ getStaticPaths; },\n/* harmony export */   \"getStaticProps\": function() { return /* binding */ getStaticProps; }\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_component_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/component/Layout */ \"./src/component/Layout.js\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);\n\nvar _jsxFileName = \"/home/shruti/country-app-nextjs/pages/country/[id].js\";\n\n\n\n\nconst getCountry = async id => {\n  const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);\n  const country = await res.json();\n  return country;\n};\n\nconst Country = ({\n  country\n}) => {\n  console.log(country);\n  const [borders, setBorders] = react__WEBPACK_IMPORTED_MODULE_1___default().useState([]);\n\n  const getBorders = async () => {\n    const borders = await Promise.all(country.borders.map(border => getCountry(border)));\n    setBorders(borders);\n  };\n\n  react__WEBPACK_IMPORTED_MODULE_1___default().useEffect(() => {\n    getBorders();\n  }, []);\n  console.log(borders);\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_src_component_Layout__WEBPACK_IMPORTED_MODULE_2__.default, {\n    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_3___default()), {\n      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n        children: country.name\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 28,\n        columnNumber: 17\n      }, undefined)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 27,\n      columnNumber: 13\n    }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n      className: \"container justify-content-center py-4\",\n      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n        className: \"display-6\",\n        children: country.name\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 31,\n        columnNumber: 17\n      }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"row\",\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n          className: \"col-lg-7 py-4\",\n          children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n            className: \"border\",\n            src: country.flag,\n            alt: country.name,\n            width: \"100%\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 34,\n            columnNumber: 25\n          }, undefined)\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 33,\n          columnNumber: 21\n        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n          className: \"col-lg-5 px-5 py-2\",\n          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Native Name:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 37,\n              columnNumber: 47\n            }, undefined), \" \", country.nativeName]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 37,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Capital:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 38,\n              columnNumber: 47\n            }, undefined), \" \", country.capital]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 38,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Population:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 39,\n              columnNumber: 47\n            }, undefined), \" \", country.population]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 39,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Region:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 40,\n              columnNumber: 47\n            }, undefined), \" \", country.region]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 40,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Sub-region:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 41,\n              columnNumber: 47\n            }, undefined), \" \", country.subregion]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 41,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Area:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 42,\n              columnNumber: 47\n            }, undefined), \" \", country.area, \" \"]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 42,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Country Code:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 43,\n              columnNumber: 47\n            }, undefined), \" +\", country.callingCodes]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 43,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Languages:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 44,\n              columnNumber: 47\n            }, undefined), \" \", country.languages.map(({\n              name\n            }) => name).join(\", \")]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 44,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Currencies:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 45,\n              columnNumber: 47\n            }, undefined), \" \", country.currencies.map(({\n              name\n            }) => name).join(\", \")]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 45,\n            columnNumber: 25\n          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n            className: \"fs-5\",\n            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n              children: \"Timezones:\"\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 46,\n              columnNumber: 47\n            }, undefined), \" \", country.timezones]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 46,\n            columnNumber: 25\n          }, undefined)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 36,\n          columnNumber: 21\n        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n          className: \"container justify-content-center py-3 border\",\n          children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"row\",\n            children: borders.map(({\n              flag,\n              name\n            }) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n              className: \"col-lg-4 py-3 px-2\",\n              children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"fs-4 display-3 py-3\",\n                children: [\" \", name]\n              }, void 0, true, {\n                fileName: _jsxFileName,\n                lineNumber: 53,\n                columnNumber: 37\n              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                className: \"border\",\n                src: flag,\n                alt: name,\n                width: \"100%\",\n                height: \"auto\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 54,\n                columnNumber: 37\n              }, undefined)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 52,\n              columnNumber: 33\n            }, undefined))\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 49,\n            columnNumber: 25\n          }, undefined)\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 48,\n          columnNumber: 21\n        }, undefined)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 32,\n        columnNumber: 17\n      }, undefined)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 30,\n      columnNumber: 13\n    }, undefined)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 26,\n    columnNumber: 9\n  }, undefined);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Country);\nconst getStaticPaths = async () => {\n  const res = await fetch(`https://restcountries.eu/rest/v2/all`);\n  const countries = await res.json();\n  const paths = countries.map(country => ({\n    params: {\n      id: country.alpha3Code\n    }\n  }));\n  return {\n    paths,\n    fallback: false\n  };\n};\nconst getStaticProps = async ({\n  params\n}) => {\n  const country = await getCountry(params.id);\n  return {\n    props: {\n      country\n    }\n  };\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb3VudHJ5LWFwcC8uL3BhZ2VzL2NvdW50cnkvW2lkXS5qcz81ZDIzIl0sIm5hbWVzIjpbImdldENvdW50cnkiLCJpZCIsInJlcyIsImZldGNoIiwiY291bnRyeSIsImpzb24iLCJDb3VudHJ5IiwiY29uc29sZSIsImxvZyIsImJvcmRlcnMiLCJzZXRCb3JkZXJzIiwiUmVhY3QiLCJnZXRCb3JkZXJzIiwiUHJvbWlzZSIsImFsbCIsIm1hcCIsImJvcmRlciIsIm5hbWUiLCJmbGFnIiwibmF0aXZlTmFtZSIsImNhcGl0YWwiLCJwb3B1bGF0aW9uIiwicmVnaW9uIiwic3VicmVnaW9uIiwiYXJlYSIsImNhbGxpbmdDb2RlcyIsImxhbmd1YWdlcyIsImpvaW4iLCJjdXJyZW5jaWVzIiwidGltZXpvbmVzIiwiZ2V0U3RhdGljUGF0aHMiLCJjb3VudHJpZXMiLCJwYXRocyIsInBhcmFtcyIsImFscGhhM0NvZGUiLCJmYWxsYmFjayIsImdldFN0YXRpY1Byb3BzIiwicHJvcHMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBOztBQUVBLE1BQU1BLFVBQVUsR0FBRyxNQUFPQyxFQUFQLElBQWM7QUFDN0IsUUFBTUMsR0FBRyxHQUFHLE1BQU1DLEtBQUssQ0FBRSwwQ0FBeUNGLEVBQUcsRUFBOUMsQ0FBdkI7QUFDQSxRQUFNRyxPQUFPLEdBQUcsTUFBTUYsR0FBRyxDQUFDRyxJQUFKLEVBQXRCO0FBQ0EsU0FBT0QsT0FBUDtBQUNILENBSkQ7O0FBTUEsTUFBTUUsT0FBTyxHQUFHLENBQUM7QUFBRUY7QUFBRixDQUFELEtBQWlCO0FBQzdCRyxTQUFPLENBQUNDLEdBQVIsQ0FBWUosT0FBWjtBQUNBLFFBQU0sQ0FBQ0ssT0FBRCxFQUFVQyxVQUFWLElBQXdCQyxxREFBQSxDQUFlLEVBQWYsQ0FBOUI7O0FBRUEsUUFBTUMsVUFBVSxHQUFHLFlBQVk7QUFDM0IsVUFBTUgsT0FBTyxHQUFHLE1BQU1JLE9BQU8sQ0FBQ0MsR0FB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QUFBO0FBQUEscUJBaEJKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFGSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBSko7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBREo7QUFzQ0gsQ0FwREQ7O0FBc0RBLCtEQUFlWCxPQUFmO0FBRU8sTUFBTXdCLGNBQWMsR0FBRyxZQUFZO0FBQ3RDLFFBQU01QixHQUFHLEdBQUcsTUFBTUMsS0FBSyxDQUFFLHNDQUFGLENBQXZCO0FBQ0EsUUFBTTRCLFNBQVMsR0FBRyxNQUFNN0IsR0FBRyxDQUFDRyxJQUFKLEVBQXhCO0FBQ0EsUUFBTTJCLEtBQUssR0FBR0QsU0FBUyxDQUFDaEIsR0FBVixDQUFjWCxPQUFPLEtBQUs7QUFDcEM2QixVQUFNLEVBQUU7QUFBRWhDLFFBQUUsRUFBRUcsT0FBTyxDQUFDOEI7QUFBZDtBQUQ0QixHQUFMLENBQXJCLENBQWQ7QUFHQSxTQUFPO0FBQ0hGLFNBREc7QUFFSEcsWUFBUSxFQUFFO0FBRlAsR0FBUDtBQUlILENBVk07QUFZQSxNQUFNQyxjQUFjLEdBQUcsT0FBTztBQUFFSDtBQUFGLENBQVAsS0FBc0I7QUFFaEQsUUFBTTdCLE9BQU8sR0FBRyxNQUFNSixVQUFVLENBQUNpQyxNQUFNLENBQUNoQyxFQUFSLENBQWhDO0FBQ0EsU0FBTztBQUNIb0MsU0FBSyxFQUFFO0FBQ0hqQztBQURHO0FBREosR0FBUDtBQUtILENBUk0iLCJmaWxlIjoiLi9wYWdlcy9jb3VudHJ5L1tpZF0uanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgTGF5b3V0IGZyb20gJy4uLy4uL3NyYy9jb21wb25lbnQvTGF5b3V0JztcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIlxuXG5jb25zdCBnZXRDb3VudHJ5ID0gYXN5bmMgKGlkKSA9PiB7XG4gICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vcmVzdGNvdW50cmllcy5ldS9yZXN0L3YyL2FscGhhLyR7aWR9YCk7XG4gICAgY29uc3QgY291bnRyeSA9IGF3YWl0IHJlcy5qc29uKCk7XG4gICAgcmV0dXJuIGNvdW50cnk7XG59XG5cbmNvbnN0IENvdW50cnkgPSAoeyBjb3VudHJ5IH0pID0+IHtcbiAgICBjb25zb2xlLmxvZyhjb3VudHJ5KTtcbiAgICBjb25zdCBbYm9yZGVycywgc2V0Qm9yZGVyc10gPSBSZWFjdC51c2VTdGF0ZShbXSk7XG5cbiAgICBjb25zdCBnZXRCb3JkZXJzID0gYXN5bmMgKCkgPT4ge1xuICAgICAgICBjb25zdCBib3JkZXJzID0gYXdhaXQgUHJvbWlzZS5hbGwoY291bnRyeS5ib3JkZXJzLm1hcChib3JkZXIgPT4gZ2V0Q291bnRyeShib3JkZXIpKSk7XG5cbiAgICAgICAgc2V0Qm9yZGVycyhib3JkZXJzKTtcbiAgICB9O1xuICAgIFJlYWN0LnVzZUVmZmVjdCgoKSA9PiB7XG4gICAgICAgIGdldEJvcmRlcnMoKTtcbiAgICB9LFxuICAgICAgICBbXSk7XG4gICAgY29uc29sZS5sb2coYm9yZGVycyk7XG4gICAgcmV0dXJuIChcbiAgICAgICAgPExheW91dD5cbiAgICAgICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgICAgIDx0aXRsZT57Y291bnRyeS5uYW1lfTwvdGl0bGU+XG4gICAgICAgICAgICA8L0hlYWQ+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBqdXN0aWZ5LWNvbnRlbnQtY2VudGVyIHB5LTRcIj5cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwiZGlzcGxheS02XCI+e2NvdW50cnkubmFtZX08L2gzPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm93XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sLWxnLTcgcHktNFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBjbGFzc05hbWU9XCJib3JkZXJcIiBzcmM9e2NvdW50cnkuZmxhZ30gYWx0PXtjb3VudHJ5Lm5hbWV9IHdpZHRoPVwiMTAwJVwiID48L2ltZz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sLWxnLTUgcHgtNSBweS0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWUgPSBcImZzLTVcIj48c3Ryb25nPk5hdGl2ZSBOYW1lOjwvc3Ryb25nPiB7Y291bnRyeS5uYXRpdmVOYW1lfTwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZSA9IFwiZnMtNVwiPjxzdHJvbmc+Q2FwaXRhbDo8L3N0cm9uZz4ge2NvdW50cnkuY2FwaXRhbH08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWUgPSBcImZzLTVcIj48c3Ryb25nPlBvcHVsYXRpb246PC9zdHJvbmc+IHtjb3VudHJ5LnBvcHVsYXRpb259PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lID0gXCJmcy01XCI+PHN0cm9uZz5SZWdpb246PC9zdHJvbmc+IHtjb3VudHJ5LnJlZ2lvbn08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWUgPSBcImZzLTVcIj48c3Ryb25nPlN1Yi1yZWdpb246PC9zdHJvbmc+IHtjb3VudHJ5LnN1YnJlZ2lvbn08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWUgPSBcImZzLTVcIj48c3Ryb25nPkFyZWE6PC9zdHJvbmc+IHtjb3VudHJ5LmFyZWF9IDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZSA9IFwiZnMtNVwiPjxzdHJvbmc+Q291bnRyeSBDb2RlOjwvc3Ryb25nPiAre2NvdW50cnkuY2FsbGluZ0NvZGVzfTwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZSA9IFwiZnMtNVwiPjxzdHJvbmc+TGFuZ3VhZ2VzOjwvc3Ryb25nPiB7Y291bnRyeS5sYW5ndWFnZXMubWFwKCh7IG5hbWUgfSkgPT4gbmFtZSkuam9pbihcIiwgXCIpfTwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZSA9IFwiZnMtNVwiPjxzdHJvbmc+Q3VycmVuY2llczo8L3N0cm9uZz4ge2NvdW50cnkuY3VycmVuY2llcy5tYXAoKHsgbmFtZSB9KSA9PiBuYW1lKS5qb2luKFwiLCBcIil9PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lID0gXCJmcy01XCI+PHN0cm9uZz5UaW1lem9uZXM6PC9zdHJvbmc+IHtjb3VudHJ5LnRpbWV6b25lc308L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBqdXN0aWZ5LWNvbnRlbnQtY2VudGVyIHB5LTMgYm9yZGVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJvd1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtib3JkZXJzLm1hcCgoeyBmbGFnLCBuYW1lIH0pID0+XG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wtbGctNCBweS0zIHB4LTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZnMtNCBkaXNwbGF5LTMgcHktM1wiPiB7bmFtZX08L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgY2xhc3NOYW1lPVwiYm9yZGVyXCIgc3JjPXtmbGFnfSBhbHQ9e25hbWV9IHdpZHRoPVwiMTAwJVwiIGhlaWdodCA9IFwiYXV0b1wiPjwvaW1nPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4pfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvTGF5b3V0PlxuXG4gICAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBDb3VudHJ5O1xuXG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUGF0aHMgPSBhc3luYyAoKSA9PiB7XG4gICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vcmVzdGNvdW50cmllcy5ldS9yZXN0L3YyL2FsbGApO1xuICAgIGNvbnN0IGNvdW50cmllcyA9IGF3YWl0IHJlcy5qc29uKCk7XG4gICAgY29uc3QgcGF0aHMgPSBjb3VudHJpZXMubWFwKGNvdW50cnkgPT4gKHtcbiAgICAgICAgcGFyYW1zOiB7IGlkOiBjb3VudHJ5LmFscGhhM0NvZGUgfSxcbiAgICB9KSk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcGF0aHMsXG4gICAgICAgIGZhbGxiYWNrOiBmYWxzZSxcbiAgICB9XG59O1xuXG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUHJvcHMgPSBhc3luYyAoeyBwYXJhbXMgfSkgPT4ge1xuXG4gICAgY29uc3QgY291bnRyeSA9IGF3YWl0IGdldENvdW50cnkocGFyYW1zLmlkKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBwcm9wczoge1xuICAgICAgICAgICAgY291bnRyeSxcbiAgICAgICAgfSxcbiAgICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/country/[id].js\n");
 
 /***/ }),
 
-/***/ 701:
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
 /***/ (function(module) {
 
 "use strict";
@@ -186,7 +34,10 @@ module.exports = require("next/head");;
 
 /***/ }),
 
-/***/ 297:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ (function(module) {
 
 "use strict";
@@ -194,11 +45,14 @@ module.exports = require("react");;
 
 /***/ }),
 
-/***/ 282:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ (function(module) {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-dev-runtime");;
 
 /***/ })
 
@@ -209,7 +63,7 @@ module.exports = require("react/jsx-runtime");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [62], function() { return __webpack_exec__(7); });
+var __webpack_exports__ = __webpack_require__.X(0, ["src_component_Layout_js"], function() { return __webpack_exec__("./pages/country/[id].js"); });
 module.exports = __webpack_exports__;
 
 })();
